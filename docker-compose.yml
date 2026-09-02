@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   windows:
     image: dockurr/windows
@@ -13,7 +11,7 @@ services:
       - "3389:3389/tcp"
       - "3389:3389/udp"
     volumes:
-      - 345c268d436ece3c5add6cd1355326c51a49206c50d6c4d900833f215af7a739:/storage
+      - win_storage:/storage
     environment:
       VERSION: "tiny11"
       RAM_SIZE: "16G"
@@ -21,6 +19,11 @@ services:
     networks:
       - ddev_default
     restart: on-failure
+
+volumes:
+  win_storage:
+    external: true
+    name: 345c268d436ece3c5add6cd1355326c51a49206c50d6c4d900833f215af7a739
 
 networks:
   ddev_default:
