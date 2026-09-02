@@ -13,7 +13,7 @@ services:
     volumes:
       - win_storage:/storage
     environment:
-      VERSION: "tiny11"
+      VERSION: "win10"
       RAM_SIZE: "16G"
       CPU_CORES: "6"
     networks:
