@@ -12,6 +12,8 @@ services:
       - "8006:8006"
       - "3389:3389/tcp"
       - "3389:3389/udp"
+    volumes:
+      - 345c268d436ece3c5add6cd1355326c51a49206c50d6c4d900833f215af7a739:/storage
     environment:
       VERSION: "tiny11"
       RAM_SIZE: "16G"
