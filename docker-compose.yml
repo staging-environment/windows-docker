@@ -12,6 +12,7 @@ services:
       - "3389:3389/udp"
     volumes:
       - win_storage:/storage
+      - /home/developer/Projects/windows-virtusgesnet/shared:/storage/shared
     environment:
       VERSION: "win10"
       RAM_SIZE: "16G"
