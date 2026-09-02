@@ -23,7 +23,7 @@ services:
 volumes:
   win_storage:
     external: true
-    name: 345c268d436ece3c5add6cd1355326c51a49206c50d6c4d900833f215af7a739
+    name: windows-virtusgesnet-win-storage
 
 networks:
   ddev_default:
