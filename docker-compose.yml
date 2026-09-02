@@ -3,23 +3,23 @@ version: '3'
 services:
   windows:
     image: dockurr/windows
-    container_name: ddev-utrecar-windows  # Siguiendo tu nomenclatura
+    container_name: ddev-utrecar-windows
     devices:
       - /dev/kvm
     cap_add:
       - NET_ADMIN
     ports:
-      - "8006:8006"   # Interfaz Web (Escritorio en el navegador)
-      - "3389:3389/tcp" # Escritorio Remoto (RDP)
+      - "8006:8006"
+      - "3389:3389/tcp"
       - "3389:3389/udp"
     environment:
-      VERSION: "tiny11" # Te recomiendo 'tiny11' para que vuele en el server
+      VERSION: "tiny11"
       RAM_SIZE: "16G"
       CPU_CORES: "6"
     networks:
-      - ddev_default  # <--- IMPORTANTE: Se une a la red de tus otros contenedores
+      - ddev_default
     restart: on-failure
 
 networks:
   ddev_default:
-    external: true    # Le decimos que use la red que ya creó DDEV
+    external: true
