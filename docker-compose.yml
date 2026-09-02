@@ -14,12 +14,12 @@ services:
       - "3389:3389/udp"
     environment:
       VERSION: "tiny11" # Te recomiendo 'tiny11' para que vuele en el server
-      RAM_SIZE: "4G"
-      CPU_CORES: "2"
+      RAM_SIZE: "16G"
+      CPU_CORES: "6"
     networks:
       - ddev_default  # <--- IMPORTANTE: Se une a la red de tus otros contenedores
     restart: on-failure
 
 networks:
   ddev_default:
-    external: true    # Le decimos que use la red que ya creÃ³ DDEV
+    external: true    # Le decimos que use la red que ya creó DDEV
